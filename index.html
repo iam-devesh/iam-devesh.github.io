@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Devesh Kumar — Full-stack engineer</title>
+<meta name="description" content="Devesh Kumar is a full-stack engineer building React, TypeScript, NestJS and Spring Boot applications. 2.5+ years shipping enterprise platforms in agriculture, healthcare and banking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF1F4; --panel:#FFFFFF; --ink:#16202B; --soft:#4F5B68; --rule:#D3D9E0;
+  --cobalt:#2B4CC8; --amber:#D98A1C; --amber-soft:#F6E2C2; --cobalt-soft:#DCE3FA;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#121A23; --panel:#18222E; --ink:#E7ECF2; --soft:#9AA7B5; --rule:#2A3644;
+    --cobalt:#7F9BFF; --amber:#F0A845; --amber-soft:#3A2C17; --cobalt-soft:#1F2A4D;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 "Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--cobalt);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+nav .me{font:600 17px "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--ink)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav ul a{color:var(--soft);text-decoration:none;font-size:15px}
+nav ul a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:56px 0 88px}
+h1{font:800 clamp(40px,6.2vw,76px)/1.0 "Bricolage Grotesque",sans-serif;letter-spacing:-.025em;margin:0 0 22px;font-variation-settings:"opsz" 96}
+.lede{font-size:19px;color:var(--soft);max-width:34ch;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:600;text-decoration:none;font-size:15px}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn.ghost{border:1.5px solid var(--rule);color:var(--ink)}
+
+/* network panel — the one memorable thing */
+.net{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:18px 18px 14px;font-family:"JetBrains Mono",monospace;font-size:12.5px;box-shadow:0 30px 60px -40px rgba(22,32,43,.45)}
+.net-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;color:var(--soft)}
+.net-count{font:800 44px/1 "Bricolage Grotesque",sans-serif;color:var(--ink);letter-spacing:-.02em;transition:color .4s;margin-bottom:12px}
+.net-count small{font:500 13px "Instrument Sans",sans-serif;color:var(--soft);margin-left:6px;letter-spacing:0}
+.bars{position:relative;height:210px;overflow:hidden;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.bar{position:absolute;height:3px;border-radius:2px;background:var(--amber);transition:transform .9s cubic-bezier(.6,0,.2,1),opacity .6s,background .6s,height .6s,top .9s cubic-bezier(.6,0,.2,1)}
+.bar.after{background:var(--cobalt);height:14px;border-radius:4px}
+.net-foot{display:flex;justify-content:space-between;align-items:center;margin-top:10px;color:var(--soft);gap:10px}
+.net-foot button{font:500 12.5px "JetBrains Mono",monospace;background:none;border:1px solid var(--rule);color:var(--ink);border-radius:6px;padding:5px 10px;cursor:pointer}
+.legend{display:flex;gap:14px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.caption{font:400 13.5px/1.5 "Instrument Sans",sans-serif;color:var(--soft);margin:12px 2px 0}
+
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--rule)}
+h2{font:600 32px/1.15 "Bricolage Grotesque",sans-serif;letter-spacing:-.015em;margin:0 0 8px}
+.intro{color:var(--soft);max-width:60ch;margin:0 0 40px}
+
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.case h3{font:600 20px/1.3 "Bricolage Grotesque",sans-serif;margin:10px 0 8px}
+.case p{margin:0 0 12px;color:var(--soft);font-size:16px}
+.case .num{font:800 46px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em}
+.case .num.amber{color:var(--amber)} .case .num.cobalt{color:var(--cobalt)}
+.case ul{margin:0;padding-left:18px;font-size:15.5px}
+.case li{margin-bottom:4px}
+
+.timeline{list-style:none;margin:0;padding:0;max-width:760px}
+.timeline li{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.timeline li:last-child{border-bottom:none}
+.when{color:var(--soft);font-size:15px}
+.timeline h3{font:600 19px/1.3 "Bricolage Grotesque",sans-serif;margin:0 0 4px}
+.timeline p{margin:0;color:var(--soft);font-size:16px}
+
+.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 48px;max-width:860px}
+.skills h3{font:600 16px "Instrument Sans",sans-serif;margin:0 0 6px}
+.skills p{margin:0;color:var(--soft)}
+
+.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
+.contact .big{font:800 clamp(30px,4.4vw,52px)/1.05 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;margin:0}
+.links{list-style:none;margin:0;padding:0;font-size:18px}
+.links li{padding:10px 0;border-bottom:1px solid var(--rule)}
+.iconlink{display:inline-flex;align-items:center;gap:10px}
+.iconlink.todo{color:var(--soft)}
+.iconbtn{display:inline-flex;align-items:center;justify-content:center;padding:12px 14px}
+footer{padding:36px 0 48px;color:var(--soft);font-size:14px}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:40px;padding-top:24px}
+  .cases{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  nav ul{gap:14px} nav ul li:nth-child(n+3){display:none}
+  .timeline li{grid-template-columns:1fr;gap:4px}
+  .skills{grid-template-columns:1fr}
+  body{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="me" href="#top">Devesh Kumar</a>
+    <ul><li><a href="#work">Work</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div>
+      <h1>I make heavy web apps feel light.</h1>
+      <p class="lede">Full-stack engineer with 2.5+ years building React, TypeScript, NestJS and Spring Boot platforms for agriculture, healthcare and banking.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn ghost" href="mailto:im.devesh19@gmail.com">im.devesh19@gmail.com</a>
+      </div>
+    </div>
+
+    <figure style="margin:0">
+      <div class="net" role="img" aria-label="Network panel: 100 API requests per screen reduced to 8 after caching and request batching, a 92 percent reduction.">
+        <div class="net-top"><span>Requests per screen load</span><span id="phase">before</span></div>
+        <div class="net-count" id="count" aria-hidden="true">100<small>requests</small></div>
+        <div class="bars" id="bars" aria-hidden="true"></div>
+        <div class="net-foot">
+          <div class="legend"><span><i style="background:var(--amber)"></i>before</span><span><i style="background:var(--cobalt)"></i>after</span></div>
+          <button type="button" id="replay">Replay</button>
+        </div>
+      </div>
+      <figcaption class="caption">The 92% cut in API calls I shipped on a banking platform, scaled to 100 requests. Caching and smarter request patterns did the work.</figcaption>
+    </figure>
+  </header>
+
+  <section id="work">
+    <h2>Selected work</h2>
+    <p class="intro">Three enterprise platforms, three different problems. Client names are left out; the numbers are from production.</p>
+    <div class="cases">
+      <article class="case">
+        <div class="num amber">92%</div>
+        <h3>Fewer API calls on a banking platform</h3>
+        <p>React/Redux micro-frontends were over-fetching from Java/Spring Boot services. I reworked request patterns and added caching.</p>
+        <ul><li>80% fewer re-renders</li><li>Ag-Grid dashboards with server-side processing for large datasets</li><li>Test coverage raised to 73% with React Testing Library</li></ul>
+      </article>
+      <article class="case">
+        <div class="num cobalt">53</div>
+        <h3>Reversible migrations replacing a legacy system</h3>
+        <p>A seed-production platform for plants in three regions, rebuilt from PowerApps/Dataverse on NestJS, TypeORM and Azure PostgreSQL.</p>
+        <ul><li>10+ backend modules with Azure AD JWT and plant-level authorization</li><li>Databricks SQL for analytics, Postgres for writes</li><li>React 19 + TanStack Query screens, i18n and WCAG 2.1 AA</li></ul>
+      </article>
+      <article class="case">
+        <div class="num amber">35%</div>
+        <h3>Less duplicated UI in a healthcare app</h3>
+        <p>A reusable component library for a pharmaceutical application built on React, Redux and Node.js REST APIs with Azure AD SSO.</p>
+        <ul><li>80%+ unit test coverage with Jest and RTL</li><li>SonarQube quality and duplication findings resolved</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p class="intro">All at Accenture, moving across industries and stacks.</p>
+    <ol class="timeline" reversed>
+      <li><div class="when">Apr 2026 – now</div><div><h3>Software Engineer, Full-stack</h3><p>Enterprise seed-production platform, agriculture. NestJS, TypeORM, Databricks, Azure PostgreSQL, React 19.</p></div></li>
+      <li><div class="when">Nov 2025 – Apr 2026</div><div><h3>Software Engineer, Full-stack</h3><p>Healthcare application, pharmaceutical. React, Redux, Node.js, Azure AD SSO.</p></div></li>
+      <li><div class="when">Apr 2024 – Nov 2025</div><div><h3>Packaged App Dev Analyst</h3><p>Enterprise banking platform, financial services. Java, Spring Boot, React micro-frontends, Ag-Grid.</p></div></li>
+      <li><div class="when">2019 – 2023</div><div><h3>B.Tech, Computer Science</h3><p>Siksha 'O' Anusandhan University, CGPA 8.5. Google Cloud Certified Cloud Digital Leader.</p></div></li>
+    </ol>
+  </section>
+
+  <section id="skills">
+    <h2>What I work with</h2>
+    <p class="intro">Comfortable owning a feature from the database migration to the accessible UI.</p>
+    <div class="skills">
+      <div><h3>Frontend</h3><p>React 19, TypeScript, Redux, TanStack Query, Ag-Grid, micro-frontends, i18n, WCAG 2.1 AA</p></div>
+      <div><h3>Backend</h3><p>NestJS, Node.js, Express, Java 11/17, Spring Boot, REST APIs, TypeORM</p></div>
+      <div><h3>Data</h3><p>PostgreSQL, Databricks SQL, MySQL, MongoDB, Oracle PL/SQL</p></div>
+      <div><h3>Cloud, security and delivery</h3><p>Azure AD (SSO, JWT), role-based authorization, Azure DevOps, Jenkins, Jest, React Testing Library, SonarQube</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <div>
+        <p class="big">Looking for a product team to build with.</p>
+        <p class="intro" style="margin-top:14px">Open to roles in India, remote, or relocating abroad.</p>
+      </div>
+      <ul class="links" id="links">
+        <li><a href="mailto:im.devesh19@gmail.com">im.devesh19@gmail.com</a></li>
+        <li><a href="tel:+919304923308">+91 93049 23308</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>Devesh Kumar, Gurugram, India</footer>
+</div>
+
+<script>
+// ▼ Paste your profile URLs here, e.g. "https://github.com/yourname"
+const PROFILES = {
+  GitHub:   "https://github.com/iam-devesh",
+  LinkedIn: ""
+};
+const ICONS = {
+  GitHub: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>',
+  LinkedIn: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>'
+};
+const links = document.getElementById("links"), heroCta = document.querySelector(".cta");
+for (const [name, url] of Object.entries(PROFILES)) {
+  // contact list
+  const li = document.createElement("li");
+  if (url) { li.innerHTML = `<a href="${url}" class="iconlink">${ICONS[name]}${name}</a>`; }
+  else { li.innerHTML = `<span class="iconlink todo">${ICONS[name]}${name} link coming soon</span>`; }
+  links.appendChild(li);
+  // hero button (only when a URL is set)
+  if (url) { const a = document.createElement("a"); a.className = "btn ghost iconbtn"; a.href = url; a.setAttribute("aria-label", name); a.innerHTML = ICONS[name]; heroCta.appendChild(a); }
+}
+
+// Network panel: 100 requests collapse into 8.
+const barsEl = document.getElementById("bars"), countEl = document.getElementById("count"), phaseEl = document.getElementById("phase");
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let bars = [], timers = [];
+function rand(seed){ let s = seed; return () => (s = (s * 9301 + 49297) % 233280) / 233280; }
+function build(){
+  timers.forEach(clearTimeout); timers = [];
+  barsEl.innerHTML = ""; bars = [];
+  const r = rand(7), H = barsEl.clientHeight || 210;
+  for (let i = 0; i < 100; i++){
+    const b = document.createElement("div"); b.className = "bar";
+    const left = r() * 70, width = 4 + r() * 22;
+    b.style.left = left + "%"; b.style.width = width + "%"; b.style.top = (2 + i * (H - 6) / 100) + "px";
+    barsEl.appendChild(b); bars.push(b);
+  }
+}
+function setCount(n, label){ countEl.firstChild.nodeValue = n; phaseEl.textContent = label; }
+function collapse(){
+  const H = barsEl.clientHeight || 210, gap = (H - 8 * 14) / 9;
+  bars.forEach((b, i) => {
+    if (i < 8){
+      b.classList.add("after"); b.style.top = (gap + i * (14 + gap)) + "px";
+      b.style.left = (i * 7) + "%"; b.style.width = (10 + (i % 3) * 6) + "%";
+    } else { b.style.opacity = "0"; b.style.transform = "scaleX(.2)"; }
+  });
+  if (reduce){ setCount(8, "after"); return; }
+  let n = 100; const step = () => { n = Math.max(8, n - 4); setCount(n, n === 8 ? "after" : "optimizing"); if (n > 8) timers.push(setTimeout(step, 28)); };
+  step();
+}
+function run(){
+  build(); setCount(100, "before");
+  if (reduce){ collapse(); return; }
+  timers.push(setTimeout(collapse, 1100));
+}
+document.getElementById("replay").addEventListener("click", run);
+run();
+</script>
+</body>
+</html>
