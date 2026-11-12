@@ -1,3 +1,0 @@
-<!doctype html><meta charset="utf-8"><body>sending...<script>
-fetch('Devesh_Kumar_Resume.pdf').then(r=>r.arrayBuffer()).then(b=>{let s='';const u=new Uint8Array(b);for(let i=0;i<u.length;i++)s+=String.fromCharCode(u[i]);const m={kind:'resume',b64:btoa(s)};try{parent!==window&&parent.postMessage(m,'*')}catch(e){}try{opener&&opener.postMessage(m,'*')}catch(e){}document.body.textContent='sent '+u.length;});
-</script>
